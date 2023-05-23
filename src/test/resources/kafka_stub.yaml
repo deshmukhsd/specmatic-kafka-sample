@@ -7,7 +7,7 @@ servers:
     url: tcp://localhost:61616
     protocol: amqp
 channels:
-  newChannel1:
+  firstTopic:
     publish:
       message:
         payload:
