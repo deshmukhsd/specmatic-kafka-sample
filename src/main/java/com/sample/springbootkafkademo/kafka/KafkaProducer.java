@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Service
 public class KafkaProducer {
@@ -15,8 +16,8 @@ public class KafkaProducer {
         this.kafkaTemplate = kafkaTemplate;
     }
 
-    public void sendMessage(String message) {
-        kafkaTemplate.send("firstTopic", message);
+    public void sendMessage(@RequestParam String message) {
+        kafkaTemplate.send("firstTopic", "Msg",message);
         LOGGER.info(String.format("This is Kafka Producer: Message number " + counter + " in first topic is %s", message));
         counter++;
     }

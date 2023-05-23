@@ -65,7 +65,6 @@ public class ContractTest extends SpecmaticJUnitSupport {
         if (kafkaMock != null) {
             int count = waitForKafkaMessages();
             Assertions.assertNotEquals(0, count);
-            kafkaMock.close();
         }
 
         if (context != null) context.close();
@@ -78,12 +77,12 @@ public class ContractTest extends SpecmaticJUnitSupport {
         int count = 0;
         int sleepInterval = 1000;
 
-        while ((kafkaMock.getMessageHistory().size() == 0 && millisecondsWaited < 10000) || kafkaMock.getMessageHistory().size() != count) {
+        while ((kafkaMock.getMessageHistory().size() == 0 && millisecondsWaited < 5000) || kafkaMock.getMessageHistory().size() != count) {
             count = kafkaMock.getMessageHistory().size();
+            System.out.println("Count is "+count+" and message history is "+kafkaMock.getMessageHistory());
             Thread.sleep(sleepInterval);
             millisecondsWaited += sleepInterval;
         }
-        System.out.println(kafkaMock.getMessageHistory());
         System.out.println("Total Kafka messages received by Specmatic: " + count);
         return count;
     }

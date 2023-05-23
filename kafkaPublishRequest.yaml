@@ -13,8 +13,7 @@ paths:
           type: string
         examples:
           200_OK:
-            value:
-              message: "Hello World"
+            value: "Hello World"
       responses:
         "200":
           description: Positive Scenario
