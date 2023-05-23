@@ -17,7 +17,7 @@ public class KafkaProducer {
 
     public void sendMessage(String message) {
         kafkaTemplate.send("firstTopic", message);
-        LOGGER.info(String.format("Message number " + counter + " in first topic is %s", message));
+        LOGGER.info(String.format("This is Kafka Producer: Message number " + counter + " in first topic is %s", message));
         counter++;
     }
 }

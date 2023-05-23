@@ -1,0 +1,19 @@
+asyncapi: 2.0.0
+info:
+  title: File Event Processor
+  version: '1.0.0'
+servers:
+  activemq:
+    url: tcp://localhost:61616
+    protocol: amqp
+channels:
+  newChannel1:
+    publish:
+      message:
+        payload:
+          additionalProperties:
+            type: string
+    bindings:
+      amqp:
+        is: queue
+components: {}

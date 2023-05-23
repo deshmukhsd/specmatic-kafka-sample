@@ -1,0 +1,13 @@
+{
+  "http-request": {
+    "path": "/api/v1/kafka/publish",
+    "method": "GET",
+    "query": {
+      "message": "(string)"
+    }
+  },
+  "http-response": {
+    "status": 200,
+    "body": "(string)"
+  }
+}

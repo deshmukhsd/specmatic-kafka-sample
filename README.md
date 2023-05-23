@@ -6,3 +6,6 @@ Open another terminal session and run:
 
 # Start the Kafka broker service
 $ bin/kafka-server-start.sh config/server.properties
+
+# Terminate the Kafka environment 
+$ rm -rf /tmp/kafka-logs /tmp/zookeeper /tmp/kraft-combined-logs

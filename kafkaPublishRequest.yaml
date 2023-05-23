@@ -1,0 +1,27 @@
+openapi: 3.0.1
+info:
+  title: New Feature
+  version: "1"
+paths:
+  /api/v1/kafka/publish:
+    get:
+      summary: New scenario
+      parameters:
+      - name: message
+        in: query
+        schema:
+          type: string
+        examples:
+          200_OK:
+            value:
+              message: "Hello World"
+      responses:
+        "200":
+          description: Positive Scenario
+          content:
+            text/plain:
+              schema:
+                type: string
+              examples:
+                200_OK:
+                  value: "Message =>Hello World sent to the topic"
