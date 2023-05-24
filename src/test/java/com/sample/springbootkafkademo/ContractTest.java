@@ -54,12 +54,12 @@ public class ContractTest extends SpecmaticJUnitSupport {
                 Time.SYSTEM, Option.<String>empty(),
                 true);
         externalKafkaServer.startup();
+        kafkaMock.subscribe();
     }
 
     @AfterAll
     public static void tearDown() throws IOException, InterruptedException {
         Thread.sleep(5000);
-        kafkaMock.subscribe();
         if (kafkaMock != null) {
             int count = waitForKafkaMessages();
             Assertions.assertNotEquals(0, count);
