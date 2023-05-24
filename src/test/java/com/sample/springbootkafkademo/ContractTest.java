@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-@SpringBootTest(classes = {SpringbootKafkaDemoApplication.class }, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+@SpringBootTest(classes = {SpringbootKafkaDemoApplication.class}, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class ContractTest extends SpecmaticJUnitSupport {
     public static KafkaMock kafkaMock = null;
     private static TestingServer zkServer = null;
