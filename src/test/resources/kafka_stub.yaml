@@ -1,6 +1,6 @@
 asyncapi: 2.0.0
 info:
-  title: File Event Processor
+  title: Springboot Kafka Demo
   version: '1.0.0'
 servers:
   activemq:

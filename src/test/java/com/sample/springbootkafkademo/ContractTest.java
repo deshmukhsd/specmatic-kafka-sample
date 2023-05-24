@@ -2,7 +2,6 @@ package com.sample.springbootkafkademo;
 
 import in.specmatic.kafka.mock.KafkaMock;
 import in.specmatic.test.SpecmaticJUnitSupport;
-import kafka.metrics.KafkaMetricsReporter;
 import kafka.server.KafkaConfig;
 import kafka.server.KafkaServer;
 import org.apache.curator.test.TestingServer;
@@ -13,7 +12,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ConfigurableApplicationContext;
 import scala.Option;
-import scala.collection.JavaConverters;
 
 import java.io.IOException;
 import java.util.ArrayList;
