@@ -20,9 +20,9 @@ import java.util.Properties;
 
 @SpringBootTest(classes = {SpringbootKafkaDemoApplication.class}, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class ContractTest extends SpecmaticJUnitSupport {
-    public static KafkaMock kafkaMock = null;
+    private static KafkaMock kafkaMock = null;
     private static TestingServer zkServer = null;
-    public static KafkaServer externalKafkaServer = null;
+    private static KafkaServer externalKafkaServer = null;
     private static ConfigurableApplicationContext context = null;
 
     @BeforeAll
